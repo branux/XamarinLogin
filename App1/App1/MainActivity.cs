@@ -17,6 +17,8 @@ namespace App1
         {
             base.OnCreate(bundle);
             Window.RequestFeature(WindowFeatures.NoTitle);
+            Com.Pixate.Freestyle.PixateFreestyle.Init(this);
+            
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);

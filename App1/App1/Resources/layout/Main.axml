@@ -6,39 +6,11 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        android:text="Crie uma conta"
+        android:text="Crie sua Conta"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_weight="20"
-        android:layout_height="40dp"
-        android:textColor="#2980b9"
-        android:textStyle="bold"
         android:gravity="center"
-        android:textSize="30dp"
-        android:id="@+id/textView1" />
-    <Button
-        android:text="Logue com o Facebook"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:id="@+id/button1" />
-    <TextView
-        android:text="ou"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_weight="20"
-        android:layout_height="40dp"
-        android:textColor="#2980b9"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:id="@+id/textView1" />
-    <Button
-        android:text="Crie uma conta"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:id="@+id/button1" />
+        android:id="@+id/txtCrieSuaConta"
+        android:layout_marginBottom="0.0dp" />
 </LinearLayout>
