@@ -5,3 +5,15 @@
     font-size        : 30px;
     font-weight      : bold;
 }
+
+#btnFacebook
+{
+    background-color : 	#3b5998;
+    color            :  #ecf0f1;
+}
+
+#btnCriarConta
+{
+    background-color : 	#27ae60;
+    color            :  #ecf0f1;
+}

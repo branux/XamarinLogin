@@ -13,4 +13,25 @@
         android:gravity="center"
         android:id="@+id/txtCrieSuaConta"
         android:layout_marginBottom="0.0dp" />
+    <Button
+        android:text="Logue com o Facebook"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/btnFacebook" />
+    <TextView
+        android:text="ou"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:id="@+id/txtOu" />
+    <Button
+        android:text="Crie sua Conta"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/btnCriarConta" />
 </LinearLayout>
