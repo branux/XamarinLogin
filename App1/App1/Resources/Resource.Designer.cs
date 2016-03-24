@@ -45,7 +45,13 @@ namespace App1
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int bgLogin = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int logo3 = 2130837506;
 			
 			static Drawable()
 			{
@@ -67,7 +73,7 @@ namespace App1
 			public const int btnFacebook = 2131034113;
 			
 			// aapt resource value: 0x7f050000
-			public const int txtCrieSuaConta = 2131034112;
+			public const int imageView1 = 2131034112;
 			
 			// aapt resource value: 0x7f050002
 			public const int txtOu = 2131034114;
