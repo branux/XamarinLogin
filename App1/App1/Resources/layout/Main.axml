@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
-        android:id="@+id/imageView1"
+        android:id="@+id/imgLogoLogin"
         android:layout_marginTop="30dp"
         android:cropToPadding="false"
         android:scaleType="fitCenter"
@@ -19,9 +19,9 @@
     <Button
         android:text="Logue com o Facebook"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:id="@+id/btnFacebook" />
     <TextView
@@ -34,8 +34,8 @@
     <Button
         android:text="Crie sua Conta"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:id="@+id/btnCriarConta" />
 </LinearLayout>

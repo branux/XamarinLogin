@@ -76,7 +76,7 @@ namespace App1
 			public const int btnFacebook = 2131034113;
 			
 			// aapt resource value: 0x7f050000
-			public const int imageView1 = 2131034112;
+			public const int imgLogoLogin = 2131034112;
 			
 			// aapt resource value: 0x7f050002
 			public const int txtOu = 2131034114;
