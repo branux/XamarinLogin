@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Facebook;
 
 namespace App1
 {
@@ -18,7 +19,8 @@ namespace App1
             base.OnCreate(bundle);
             Window.RequestFeature(WindowFeatures.NoTitle);
             Com.Pixate.Freestyle.PixateFreestyle.Init(this);
-            
+            FacebookSdk.SdkInitialize(this.ApplicationContext);
+
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);

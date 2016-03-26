@@ -16,14 +16,21 @@
         android:cropToPadding="false"
         android:scaleType="fitCenter"
         android:layout_marginBottom="10dp" />
-    <Button
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp" />
+<!--   <Button
         android:text="Logue com o Facebook"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/btnFacebook" />
+        android:id="@+id/btnFacebook" /> -->
     <TextView
         android:text="ou"
         android:layout_width="match_parent"
