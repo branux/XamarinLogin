@@ -1909,6 +1909,9 @@ namespace App1
 			// aapt resource value: 0x7f0a0073
 			public const int btnCriarConta = 2131361907;
 			
+			// aapt resource value: 0x7f0a0071
+			public const int btnFacebook = 2131361905;
+			
 			// aapt resource value: 0x7f0a0028
 			public const int button = 2131361832;
 			
@@ -2040,9 +2043,6 @@ namespace App1
 			
 			// aapt resource value: 0x7f0a003c
 			public const int list_item = 2131361852;
-			
-			// aapt resource value: 0x7f0a0071
-			public const int login_button = 2131361905;
 			
 			// aapt resource value: 0x7f0a0078
 			public const int media_actions = 2131361912;
