@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Collections.Specialized;
+using App1.Classes;
 
 namespace App1
 {
@@ -19,6 +20,7 @@ namespace App1
     public class MainActivity : Activity, IFacebookCallback
     {
         private ICallbackManager mCallBackManager;
+        private MyProfileTracker mProfileTracker;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -27,8 +29,14 @@ namespace App1
             Com.Pixate.Freestyle.PixateFreestyle.Init(this);
 
             FacebookSdk.SdkInitialize(this.ApplicationContext);
+
+            mProfileTracker = new MyProfileTracker();
+            mProfileTracker.mOnProfileChanged += mProfileTracker_mOnProfileChanged;
+            mProfileTracker.StartTracking();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            
 
             Button btnFacebook = FindViewById<Button>(Resource.Id.btnFacebook);
             if (AccessToken.CurrentAccessToken != null)
@@ -68,6 +76,36 @@ namespace App1
 
         }
 
+        private void mProfileTracker_mOnProfileChanged(object sender, OnProfileChangedEventArgs e)
+        {
+            Pessoa alguem = new Pessoa();
+            if (e.mProfile != null)
+            {
+                try
+                {         
+                    alguem.primeiroNome = e.mProfile.FirstName;
+                    alguem.sobrenome = e.mProfile.LastName;
+                    alguem.nome = e.mProfile.Name;
+                }
+
+                catch (Exception ex)
+                {
+                    //Handle error
+                }
+            }
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.SetTitle("Mensagem");
+            builder.SetMessage("" + alguem.primeiroNome + ", " + alguem.sobrenome + ", " + alguem.nome);
+            builder.SetCancelable(false);
+            builder.SetPositiveButton("OK", (senderAlert, args) => { });
+            builder.Show();
+
+
+        }
+  
+
+
         public void OnCancel()
         {
             //throw new NotImplementedException();
@@ -89,6 +127,12 @@ namespace App1
         {
             base.OnActivityResult(requestCode, resultCode, data);
             mCallBackManager.OnActivityResult(requestCode, (int)resultCode, data);
+        }
+
+        protected override void OnDestroy()
+        {
+            mProfileTracker.StopTracking();
+            base.OnDestroy();
         }
 
     }
