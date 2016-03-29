@@ -1792,34 +1792,40 @@ namespace App1
 			public const int logo3 = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int messenger_bubble_large_blue = 2130837605;
+			public const int logo4 = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int messenger_bubble_large_white = 2130837606;
+			public const int messenger_bubble_large_blue = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int messenger_bubble_small_blue = 2130837607;
+			public const int messenger_bubble_large_white = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int messenger_bubble_small_white = 2130837608;
+			public const int messenger_bubble_small_blue = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int messenger_button_blue_bg_round = 2130837609;
+			public const int messenger_bubble_small_white = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int messenger_button_blue_bg_selector = 2130837610;
+			public const int messenger_button_blue_bg_round = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int messenger_button_send_round_shadow = 2130837611;
+			public const int messenger_button_blue_bg_selector = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int messenger_button_white_bg_round = 2130837612;
+			public const int messenger_button_send_round_shadow = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int messenger_button_white_bg_selector = 2130837613;
+			public const int messenger_button_white_bg_round = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int notification_template_icon_bg = 2130837614;
+			public const int messenger_button_white_bg_selector = 2130837614;
+			
+			// aapt resource value: 0x7f020070
+			public const int notification_template_icon_bg = 2130837616;
+			
+			// aapt resource value: 0x7f02006f
+			public const int splashScreen = 2130837615;
 			
 			static Drawable()
 			{
@@ -3430,6 +3436,9 @@ namespace App1
 			
 			// aapt resource value: 0x7f080000
 			public const int Theme_IAPTheme = 2131230720;
+			
+			// aapt resource value: 0x7f08014d
+			public const int Theme_Splash = 2131231053;
 			
 			// aapt resource value: 0x7f0800ee
 			public const int ThemeOverlay_AppCompat = 2131230958;

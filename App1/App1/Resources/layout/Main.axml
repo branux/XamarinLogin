@@ -7,7 +7,7 @@
     android:background="@drawable/bgLogin"
     android:minHeight="25px">
     <ImageView
-        android:src="@drawable/logo3"
+        android:src="@drawable/logo4"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"

@@ -16,7 +16,7 @@ using App1.Classes;
 
 namespace App1
 {
-    [Activity(Label = "Untitled", MainLauncher = true, Icon = "@drawable/Icone")]
+    [Activity(Label = "Untitled", MainLauncher = false, Icon = "@drawable/Icone")]
     public class MainActivity : Activity, IFacebookCallback
     {
         private ICallbackManager mCallBackManager;
