@@ -21,6 +21,7 @@ namespace App1
     {
         private ICallbackManager mCallBackManager;
         private MyProfileTracker mProfileTracker;
+        private Button mBtnCriar;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -39,6 +40,10 @@ namespace App1
             
 
             Button btnFacebook = FindViewById<Button>(Resource.Id.btnFacebook);
+            mBtnCriar = FindViewById<Button>(Resource.Id.btnCriarConta);
+
+            mBtnCriar.Click += MBtnCriar_Click;
+
             if (AccessToken.CurrentAccessToken != null)
             {
                //The user is logged in through Facebook
@@ -74,6 +79,15 @@ namespace App1
             };
 
 
+        }
+
+
+
+        private void MBtnCriar_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            dialog_CriarConta criarContaDialog = new dialog_CriarConta();
+            criarContaDialog.Show(transaction, "dialog fragment");
         }
 
         private void mProfileTracker_mOnProfileChanged(object sender, OnProfileChangedEventArgs e)
