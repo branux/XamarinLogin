@@ -18,6 +18,7 @@ namespace App1
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
+            Com.Pixate.Freestyle.PixateFreestyle.Init(this);
 
             var view = inflater.Inflate(Resource.Layout.dialog_CriarConta, container, false);
             return view;
@@ -25,7 +26,7 @@ namespace App1
 
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
-            Dialog.Window.RequestFeature.(WindowFeatures.NoTitle);
+            Dialog.Window.RequestFeature(WindowFeatures.NoTitle);
             base.OnActivityCreated(savedInstanceState);
             Dialog.Window.Attributes.WindowAnimations = Resource.Style.dialog_animation;
         }
