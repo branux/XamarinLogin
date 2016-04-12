@@ -127,6 +127,7 @@
     <Compile Include="Classes\Pessoa.cs" />
     <Compile Include="dialog_CriarConta.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Principal.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashScreen.cs" />

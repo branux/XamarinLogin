@@ -13,6 +13,7 @@ using System.IO;
 using System.Net;
 using System.Collections.Specialized;
 using App1.Classes;
+using Android.Preferences;
 
 namespace App1
 {
@@ -134,6 +135,12 @@ namespace App1
         {
             LoginResult loginResult = result as LoginResult;
             Console.WriteLine(AccessToken.CurrentAccessToken.UserId);
+            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+            ISharedPreferencesEditor editor = prefs.Edit();
+            editor.PutString("fb_access_token", AccessToken.CurrentAccessToken.UserId);
+            editor.PutLong("fb_access_expires", loginResult.
+            // editor.Commit();    // applies changes synchronously on older APIs
+            editor.Apply();        // applies changes asynchronously on newer APIs
         }
 
 
