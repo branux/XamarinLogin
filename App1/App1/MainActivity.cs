@@ -48,7 +48,7 @@ namespace App1
             if (AccessToken.CurrentAccessToken != null)
             {
                //The user is logged in through Facebook
-                btnFacebook.Text = "Logged Out";                
+                btnFacebook.Text = "Sair";                
             }
 
 
@@ -59,7 +59,6 @@ namespace App1
             // button.RegisterCallback(mCallBackManager, this);
 
             LoginManager.Instance.RegisterCallback(mCallBackManager, this);
-
 
 
 
@@ -82,8 +81,6 @@ namespace App1
 
         }
 
-
-
         private void MBtnCriar_Click(object sender, EventArgs e)
         {
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
@@ -102,7 +99,6 @@ namespace App1
                     alguem.sobrenome = e.mProfile.LastName;
                     alguem.nome = e.mProfile.Name;
                 }
-
                 catch (Exception ex)
                 {
                     //Handle error
@@ -123,24 +119,28 @@ namespace App1
 
         public void OnCancel()
         {
-            //throw new NotImplementedException();
+            ISharedPreferences pref = Application.Context.GetSharedPreferences("loginState", FileCreationMode.Private);
+            ISharedPreferencesEditor edit = pref.Edit();
+            edit.PutBoolean("logado", false);
+            edit.Apply();
         }
 
         public void OnError(FacebookException error)
         {
-           // throw new NotImplementedException();
+            ISharedPreferences pref = Application.Context.GetSharedPreferences("loginState", FileCreationMode.Private);
+            ISharedPreferencesEditor edit = pref.Edit();
+            edit.PutBoolean("logado", false);
+            edit.Apply();
         }
 
         public void OnSuccess(Java.Lang.Object result)
         {
             LoginResult loginResult = result as LoginResult;
             Console.WriteLine(AccessToken.CurrentAccessToken.UserId);
-            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
-            ISharedPreferencesEditor editor = prefs.Edit();
-            editor.PutString("fb_access_token", AccessToken.CurrentAccessToken.UserId);
-            editor.PutLong("fb_access_expires", loginResult.
-            // editor.Commit();    // applies changes synchronously on older APIs
-            editor.Apply();        // applies changes asynchronously on newer APIs
+            ISharedPreferences pref = Application.Context.GetSharedPreferences("loginState", FileCreationMode.Private);
+            ISharedPreferencesEditor edit = pref.Edit();
+            edit.PutBoolean("logado", true);
+            edit.Apply();
         }
 
 

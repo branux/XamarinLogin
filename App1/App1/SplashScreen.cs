@@ -23,11 +23,10 @@ namespace App1
         {
             base.OnCreate(savedInstanceState);
 
-            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
-            String accessToken = prefs.GetString("fb_access_token", null);
-            long expires = prefs.GetLong("fb_access_expires", 0);
+            ISharedPreferences prefs = PreferenceManager.GetSharedPreferences("logado", FileCreationMode.Private);
+            bool logado = prefs.GetBoolean("logado", false);
             
-            if(accessToken == null || expires == 0)
+            if(!logado)
             {
                 //Display Splash Screen for 4 Sec
                 Thread.Sleep(4000);
@@ -36,7 +35,10 @@ namespace App1
             }
             else
             {
-
+                //Display Splash Screen for 4 Sec
+                Thread.Sleep(4000);
+                //Start Activity1 Activity
+                StartActivity(typeof(Principal));
             }
 
             
