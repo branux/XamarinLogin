@@ -1,2 +1,2 @@
-# TCC
-só vamo
+# TCC - Login
+Esboço do login do app
