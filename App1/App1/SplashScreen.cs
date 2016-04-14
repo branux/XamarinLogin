@@ -23,7 +23,7 @@ namespace App1
         {
             base.OnCreate(savedInstanceState);
 
-            ISharedPreferences prefs = PreferenceManager.GetSharedPreferences("logado", FileCreationMode.Private);
+            ISharedPreferences prefs = Application.Context.GetSharedPreferences("loginState", FileCreationMode.Private);
             bool logado = prefs.GetBoolean("logado", false);
             
             if(!logado)

@@ -12,14 +12,14 @@ using Android.Widget;
 
 namespace App1
 {
-    [Activity(Label = "Principalcs")]
+    [Activity(Label = "Principal")]
     public class Principal : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your application here
+            Window.RequestFeature(WindowFeatures.NoTitle);
+            SetContentView(Resource.Layout.Principal);
         }
     }
 }

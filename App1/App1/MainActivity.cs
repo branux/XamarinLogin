@@ -98,6 +98,7 @@ namespace App1
                     alguem.primeiroNome = e.mProfile.FirstName;
                     alguem.sobrenome = e.mProfile.LastName;
                     alguem.nome = e.mProfile.Name;
+                   
                 }
                 catch (Exception ex)
                 {
