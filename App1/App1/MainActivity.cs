@@ -23,6 +23,7 @@ namespace App1
         private ICallbackManager mCallBackManager;
         private MyProfileTracker mProfileTracker;
         private Button mBtnCriar;
+        private TextView mTxtLogarEmail;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -42,8 +43,11 @@ namespace App1
 
             Button btnFacebook = FindViewById<Button>(Resource.Id.btnFacebook);
             mBtnCriar = FindViewById<Button>(Resource.Id.btnCriarConta);
+            mTxtLogarEmail = FindViewById<TextView>(Resource.Id.logarEmail);
 
             mBtnCriar.Click += MBtnCriar_Click;
+            mTxtLogarEmail.Click += mTxtLogarEmail_Click;
+
 
             if (AccessToken.CurrentAccessToken != null)
             {
@@ -79,6 +83,13 @@ namespace App1
             };
 
 
+        }
+
+        private void mTxtLogarEmail_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            dialog_LogarEmail criarContaDialog = new dialog_LogarEmail();
+            criarContaDialog.Show(transaction, "dialog fragment");
         }
 
         private void MBtnCriar_Click(object sender, EventArgs e)

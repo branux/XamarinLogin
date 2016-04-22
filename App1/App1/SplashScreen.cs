@@ -21,8 +21,10 @@ namespace App1
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            this.Window.AddFlags(WindowManagerFlags.Fullscreen);
             base.OnCreate(savedInstanceState);
 
+            
             ISharedPreferences prefs = Application.Context.GetSharedPreferences("loginState", FileCreationMode.Private);
             bool logado = prefs.GetBoolean("logado", false);
             

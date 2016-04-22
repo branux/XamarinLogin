@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="Classes\MyProfileTracker.cs" />
     <Compile Include="Classes\Pessoa.cs" />
+    <Compile Include="dialog_LogarEmail.cs" />
     <Compile Include="dialog_CriarConta.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Principal.cs" />
@@ -141,6 +142,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Principal.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\dialog_LogarEmail.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -188,7 +192,9 @@
     <AndroidResource Include="Resources\drawable\splashScreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\anim\slide_up.xml" />
